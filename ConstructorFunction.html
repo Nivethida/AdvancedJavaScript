@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+var vehicle = function(name, license, model,color){
+this.name = name;
+this.license = license;
+this.model = model;
+this.color = color;
+/*this.details = function(){
+    console.log(this.name+" "+this.license+" "+this.model+" "+this.color);
+};*/
+};
+vehicle.prototype.details = function () {
+    console.log(this.name+" "+this.license+" "+this.model+" "+this.color);
+
+};
+var vehicle1 = new vehicle("Toyota","RX250","Camry","Black");
+console.log(vehicle1);
+vehicle1.details();
+
+
+var vehicle2 = new vehicle("Ford","JK435","CRV","Blue");
+vehicle2.details();
+
+console.log(vehicle1.details === vehicle2.details);
+</script>
+</body>
+</html>

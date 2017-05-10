@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var object1 = {
+        name: "Totoya",
+        model: "Camry"
+    };
+    object1.price = 1200;
+
+    console.log(object1);
+    console.log(object1.model);
+
+    var object2 = {
+        1 : "ford",
+        "License no": 1234
+    };
+    var object4 = {};
+
+    console.log(object2[1]);
+    console.log(object2["License no"]);
+
+    console.log(typeof object1.__proto__);
+
+    console.log(object1.__proto__ === Object.prototype)
+
+    var object3 = Object.create(object1);
+
+    console.log(object3.name);
+    console.log(object3.__proto__ === Object.prototype)
+    console.log(object3.__proto__.__proto__ === Object.prototype)
+
+    Object.defineProperty(object4,name,{value: "Tesla"});
+    Object.defineProperties(object4,{
+        model: {
+            value: "S"
+        },
+        color: {
+            value: "black"
+        }
+    })
+</script>
+</body>
+</html>
